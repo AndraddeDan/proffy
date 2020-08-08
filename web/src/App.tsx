@@ -1,10 +1,11 @@
 import React from 'react';
+import Landing from './pages/Landing';
+
+import './assets/scss/main.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>HELLO WORLD</h1>
-    </div>
+    <Landing />
   );
 }
 
