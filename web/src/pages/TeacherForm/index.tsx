@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from './../../components/Header/index';
+import PageHeader from '../../components/PageHeader/index';
 
 function TeacherForm() {
     return (
         <div id="page-teacher-list" className="container">
-            <Header title="Que incrível que você quer dar aulas." />
+            <PageHeader title="Que incrível que você quer dar aulas." />
         </div>
     );
 }

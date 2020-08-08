@@ -7,7 +7,7 @@ import logoImg from '../../assets/img/logo.svg';
 import { Props } from './props';
 import './style.scss';
 
-const Header: React.FC<Props> = (props) => {
+const PageHeader: React.FC<Props> = (props) => {
   return (
     <header className="page-header" >
       <div className="top-bar-container">
@@ -26,4 +26,4 @@ const Header: React.FC<Props> = (props) => {
   );
 }
 
-export default Header;
+export default PageHeader;
