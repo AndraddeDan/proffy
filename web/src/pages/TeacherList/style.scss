@@ -131,6 +131,12 @@
 @media (min-width: 700px) {
   #page-teacher-list {
     max-width: 100%;
+
+    main {
+      margin: 0 auto;
+      max-width: 740px;
+      padding: 3.2rem 0;
+    }
   }
 
   #search-teachers {
@@ -139,5 +145,34 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: absolute;
+  }
+
+  .teacher-item {
+    header {
+      padding: 3.2rem;
+    }
+
+    & > p {
+      padding: 3.2rem;
+    }
+
+    footer {
+      padding: 3.2rem;
+
+      p > strong {
+        display: initial;
+        margin-left: 1.6rem;
+      }
+
+      button {
+        font-size: 1.6rem;
+        justify-content: center;
+        width: 24.5rem;
+
+        img {
+          margin-right: 1.6rem;
+        }
+      }
+    }
   }
 }
