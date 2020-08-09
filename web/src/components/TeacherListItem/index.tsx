@@ -2,33 +2,38 @@ import React from 'react';
 
 import whatsAppIcon from '../../assets/icons/whatsapp.svg'
 
-import './style.scss'
+import { Props } from './props';
 
-function TeacherListItem() {
+import './style.scss'
+import api from '../../services/api';
+
+const TeacherListItem: React.FC<Props> = ({ teacher }) => {
+  function createNewConnection() {
+    api.post('connections', { user_id: teacher.id });
+  }
+
   return (
     <article className="teacher-item">
 
       <header>
-        <img src="https://avatars0.githubusercontent.com/u/28069006?s=460&u=4f137b01ea9adc9651c3ba52da8c493e99605f34&v=4" alt="Daniel Andrade" />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Daniel Andrade</strong>
-          <span>Música</span>
+          <strong>{teacher.name}</strong>
+          <span> {teacher.subject} </span>
         </div>
       </header>
 
-      <p>
-        +55011... Desenvolvedor Front-End, Designer digital, apaixonado por livros e games, ilustrador por hobby.
-          </p>
+      <p> {teacher.bio} </p>
 
       <footer>
         <p>
-          Preço/hora
-              <strong>R$ 90,00</strong>
+          <span> Preço/hora </span>
+          <strong>R$ {teacher.cost}</strong>
         </p>
-        <button type="button">
+        <a onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}?text=Olá`} target="_blank">
           <img src={whatsAppIcon} alt="WhattsApp" />
-              Entrar em contato
-            </button>
+          <span> Entrar em contato </span>
+        </a>
       </footer>
     </article>
   );

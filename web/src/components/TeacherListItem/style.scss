@@ -54,17 +54,18 @@
       font-size: 1.6rem;
     }
 
-    button {
+    a {
       align-items: center;
       background: var(--color-secondary);
-      border-radius: 0.8rem;
       border: 0;
+      border-radius: .8rem;
       color: var(--color-button-text);
       cursor: pointer;
       display: flex;
       font: 700 1.4rem Archivo;
       height: 5.6rem;
       justify-content: space-evenly;
+      text-decoration: none;
       transition: 0.2s;
       width: 20rem;
 
