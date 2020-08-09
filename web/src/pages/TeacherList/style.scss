@@ -14,6 +14,27 @@
   label {
     color: var(--color-text-in-primary);
   }
+
+  button {
+    align-items: center;
+    background: var(--color-secondary);
+    border: 0;
+    border-radius: 0.8rem;
+    color: var(--color-button-text);
+    cursor: pointer;
+    display: flex;
+    font: 700 1.6rem Archivo;
+    height: 5.6rem;
+    justify-content: center;
+    margin-top: 3.2rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    width: 100%;
+
+    &:hover {
+      background: var(--color-secondary-dark);
+    }
+  }
 }
 
 @media (min-width: 700px) {
@@ -31,12 +52,16 @@
     bottom: -25px;
     column-gap: 16px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     position: absolute;
 
     .input-block + .input-block,
     .select-block + .select-block {
       margin-top: 0;
+    }
+
+    button {
+      margin-top: 3rem;
     }
   }
 }
