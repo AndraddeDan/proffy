@@ -3,8 +3,10 @@
   background: var(--color-primary);
   color: var(--color-text-in-primary);
   display: flex;
-  height: 100vh;
   justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 30px;
   width: 100vw;
 }
 
