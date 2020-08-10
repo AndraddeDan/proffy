@@ -8,7 +8,7 @@ import heartIcon from '../../assets/icons/heart.png';
 
 import styles from './styles';
 
-function HomeScreen() {
+function LandingPage() {
   return (
     <View style={styles.container}>
       <Image style={styles.banner} source={landingImg} />
@@ -38,4 +38,4 @@ function HomeScreen() {
   );
 }
 
-export default HomeScreen;
+export default LandingPage;
