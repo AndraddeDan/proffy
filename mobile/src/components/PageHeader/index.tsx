@@ -9,7 +9,7 @@ import logoImg from '../../assets/img/logo.png';
 import { Props } from './props';
 import styles from './styles';
 
-const PageHeader: React.FC<Props> = ({ title }) => {
+const PageHeader: React.FC<Props> = ({ title, children }) => {
   const { navigate } = useNavigation();
 
   function handleGoBack() {
@@ -27,6 +27,8 @@ const PageHeader: React.FC<Props> = ({ title }) => {
       </View>
 
       <Text style={styles.title}>{title}</Text>
+
+      {children}
     </View>
   );
 }
